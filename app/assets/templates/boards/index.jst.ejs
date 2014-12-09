@@ -1,0 +1,8 @@
+<h2>All the Boards/view</h2>
+
+<% boards.each(function(board) { %>
+  <a href= "<%= "#boards/" + board.get('id')%>"><%= board.escape("title") %><br>
+  <button class="deleteBoard" data-id="<%=board.get('id')%>" >Delete<button><br>
+<% }) %>
+
+<a href="/#boards/new">Create a new board<a>
